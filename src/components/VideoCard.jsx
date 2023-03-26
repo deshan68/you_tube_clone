@@ -40,9 +40,9 @@ const videoCardData = [
 
 const VideoCard = () => {
   return (
-    <ScrollView>
+    <>
       {videoCardData.map((item) => (
-        <View style={{ height: 280, marginBottom: 10 }} key={item.id}>
+        <View style={{ height: 280, marginBottom: 0 }} key={item.id}>
           <Image
             style={{ height: 220, width: "100%", resizeMode: "cover" }}
             source={{
@@ -52,16 +52,17 @@ const VideoCard = () => {
           <View
             style={{
               flexDirection: "row",
-              alignItems: "center",
+              alignItems: "flex-start",
+              paddingTop: 5,
               paddingHorizontal: 10,
               justifyContent: "space-between",
+              height: 280 - 220,
             }}
           >
             <View
               style={{
                 flexDirection: "row",
                 alignItems: "center",
-                height: 280 - 220,
                 gap: 8,
               }}
             >
@@ -78,7 +79,7 @@ const VideoCard = () => {
               />
               <View>
                 <View>
-                  <Text style={{ color: "black", fontWeight: "bold" }}>
+                  <Text style={{ color: "black" }}>
                     How Samsung phones are "Faking"
                   </Text>
                 </View>
@@ -89,13 +90,17 @@ const VideoCard = () => {
                 </View>
               </View>
             </View>
-            <View>
+            <View
+              style={{
+                paddingTop: 5,
+              }}
+            >
               <Icon name="ellipsis-v" color={"gray"} size={20} />
             </View>
           </View>
         </View>
       ))}
-    </ScrollView>
+    </>
   );
 };
 
