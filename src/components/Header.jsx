@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import React from "react";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
+import NotificationsCountBadge from "./NotificationsCountBadge";
 
 export default function Header() {
   return (
@@ -14,7 +15,15 @@ export default function Header() {
         }}
       >
         <AntDesign name="youtube" color={"red"} size={30} />
-        <Text style={{ fontSize: 22, fontWeight: "bold" }}>YouTube</Text>
+        <Text
+          style={{
+            fontSize: 22,
+            fontWeight: "bold",
+            fontFamily: "AmericanTypewriter-CondensedBold",
+          }}
+        >
+          YouTube
+        </Text>
       </View>
       <View
         style={{
@@ -24,7 +33,10 @@ export default function Header() {
         }}
       >
         <MaterialIcons name="connected-tv" color={"black"} size={25} />
-        <AntDesign name="bells" color={"black"} size={25} />
+        <View style={{ position: "relative", zIndex: 1 }}>
+          <AntDesign name="bells" color={"black"} size={25}></AntDesign>
+          <NotificationsCountBadge />
+        </View>
         <AntDesign name="search1" color={"black"} size={25} />
         <AntDesign name="user" color={"black"} size={25} />
       </View>

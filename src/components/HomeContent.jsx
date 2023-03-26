@@ -5,7 +5,7 @@ import ShortSection from "./ShortSection";
 
 const HomeContent = () => {
   return (
-    <View>
+    <View style={{ flex: 1, width: "100%" }}>
       <VideoCard />
       <ShortSection />
     </View>

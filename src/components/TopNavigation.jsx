@@ -79,5 +79,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingLeft: 10,
     gap: 10,
+    marginBottom: 10,
   },
 });
