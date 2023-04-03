@@ -4,12 +4,15 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Home from "./src/screens/Home";
+import Shorts from "./src/screens/Shorts";
+import { SafeAreaView } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Home />
-      <StatusBar style="auto" />
+      {/* <Home /> */}
+      <Shorts />
+      <StatusBar style="light" />
     </View>
   );
 }

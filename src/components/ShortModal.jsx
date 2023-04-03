@@ -38,6 +38,7 @@ const ShortModal = ({ shortModalVisible, setShortModalVisible }) => {
           <View style={styles.modalView}>
             {modalItemData.map((item) => (
               <TouchableOpacity
+                key={item.id}
                 style={styles.modalItem}
                 onPress={() => setShortModalVisible(!shortModalVisible)}
               >

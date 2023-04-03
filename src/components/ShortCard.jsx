@@ -48,6 +48,7 @@ const ShortCard = () => {
         <View style={styles.container}>
           {shortData.map((item) => (
             <Pressable
+              key={item.id}
               onLongPress={() => setShortModalVisible(!shortModalVisible)}
               delayLongPress={300}
             >
